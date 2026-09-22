@@ -206,13 +206,7 @@
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" 
-                    class="w-full relative overflow-hidden group bg-brand-green text-white font-bold py-4 rounded-xl shadow-[0_10px_20px_-10px_rgba(16,185,129,0.5)] hover:shadow-[0_15px_30px_-10px_rgba(16,185,129,0.7)] transition-all duration-300 transform hover:-translate-y-0.5 mt-4">
-                    <span class="relative z-10 flex items-center justify-center gap-2">
-                        Sign In Securely <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                    </span>
-                    <div class="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/30 to-transparent z-0"></div>
-                </button>
+                
             </form>
 
             <!-- Footer Link -->
