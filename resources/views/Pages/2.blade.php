@@ -119,13 +119,7 @@
                 </div>
 
                 <!-- Options -->
-                <div class="flex items-center justify-between pt-2">
-                    <label class="flex items-center gap-2 cursor-pointer group">
-                        <input type="checkbox" class="w-4 h-4 rounded border-slate-300 text-brand-purple focus:ring-brand-purple cursor-pointer transition-colors">
-                        <span class="text-sm text-slate-600 group-hover:text-brand-purple transition-colors">Remember me</span>
-                    </label>
-                    <a href="#" class="text-sm font-semibold text-brand-purple hover:text-brand-darkPurple transition-colors">Forgot password?</a>
-                </div>
+               
 
                 <!-- Submit Button -->
                 <button type="submit"
