@@ -1,0 +1,63 @@
+/* ============================================================
+   CUSTOM SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F8F7FC; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* ============================================================
+   BRIGHT GLASSMORPHISM CARD
+   ============================================================ */
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 25px 50px -12px rgba(123, 104, 178, 0.15),
+                inset 0 1px 0 0 rgba(255, 255, 255, 1);
+}
+
+/* ============================================================
+   FLOATING LABEL INPUT STYLES (LIGHT THEME)
+   ============================================================ */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+    transform: translateY(-24px) scale(0.85);
+    color: #7B68B2; /* brand-purple */
+    font-weight: 600;
+}
+.input-group input:focus {
+    border-bottom-color: #7B68B2;
+}
+
+/* ============================================================
+   3D ANIMATED CREDIT CARD
+   ============================================================ */
+.credit-card {
+    background: linear-gradient(135deg, #7B68B2 0%, #9B8BC4 100%);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2),
+                inset 0 1px 1px rgba(255, 255, 255, 0.4),
+                0 0 30px rgba(123, 104, 178, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* ============================================================
+   SOFT PURPLE BACKGROUND GLOWS
+   ============================================================ */
+.bg-glow-1 {
+    background: radial-gradient(circle, rgba(123, 104, 178, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+}
+.bg-glow-2 {
+    background: radial-gradient(circle, rgba(155, 139, 196, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+/* ============================================================
+   SHIMMER EFFECT KEYFRAME
+   (referenced by `group-hover:animate-[shimmer_1.5s_infinite]`)
+   ============================================================ */
+@keyframes shimmer {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
