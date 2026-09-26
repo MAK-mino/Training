@@ -1,6 +1,7 @@
 // Tailwind CSS configuration
 // Must be loaded AFTER the Tailwind CDN script and BEFORE the DOM is scanned.
 tailwind.config = {
+    darkMode: ['selector', '[data-theme="dark"]'], // <-- THIS IS THE MISSING LINE
     theme: {
         extend: {
             fontFamily: {
