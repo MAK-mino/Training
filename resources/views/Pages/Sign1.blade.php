@@ -21,6 +21,19 @@
      <script src="{{asset('js/Sign1.config.js')}}"></script>
     
     <link rel="stylesheet" href="{{asset('css/Sign1.css')}}">
+
+{{-- THEME: CSS variables for light/dark mode --}}
+<link rel="stylesheet" href="{{ asset('css/theme.css') }}">
+
+{{-- THEME: Anti-flash script — must run BEFORE body renders --}}
+<script>
+    (function() {
+        var t = localStorage.getItem('apexbooks-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+</script>
+
+
 </head>
 <body class="bg-slate-50 font-sans text-slate-800 h-screen overflow-hidden flex selection:bg-brand-purple selection:text-white">
 
@@ -83,7 +96,7 @@
     </div>
 
     <!-- RIGHT SIDE: Login Form -->
-    <div class="w-full lg:w-1/2 flex items-center justify-center p-8 bg-slate-50 relative z-10">
+<div class="w-full lg:w-1/2 flex items-center justify-center p-8 bg-slate-50 right-panel-bg relative z-10">
         <div class="w-full max-w-md">
 
             <!-- Logo -->
@@ -182,5 +195,8 @@
     <!-- Custom JS -->
   
     <script src="{{asset('js/Sign1.js')}}"></script>
+    {{-- THEME: Loads the toggle logic (icon swap, click handler, localStorage save) --}}
+<script src="{{ asset('js/theme.js') }}"></script>
+
 </body>
 </html>
