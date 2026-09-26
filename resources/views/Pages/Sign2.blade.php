@@ -21,6 +21,17 @@
    
     <Script src="{{asset('js/Sign2.config.js')}}"></Script>
     <link rel="stylesheet" href="{{asset('css/Sign2.css')}}">
+
+    <link rel="stylesheet" href="{{ asset('css/theme.css') }}">
+
+{{-- THEME: Anti-flash script — must run BEFORE body renders --}}
+<script>
+    (function() {
+        var t = localStorage.getItem('apexbooks-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+</script>
+
 </head>
 <body class="bg-slate-300 font-sans text-slate-800 h-screen overflow-hidden flex items-center justify-center relative selection:bg-brand-purple selection:text-white">
 
@@ -127,14 +138,13 @@
                 <div class="w-14 h-14 bg-brand-purple rounded-2xl flex items-center justify-center text-white shadow-lg shadow-brand-purple/30 mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
                     <i class="fa-solid fa-chart-line text-2xl"></i>
                 </div>
-                <h1 class="text-3xl font-bold tracking-tight text-slate-900">Apexbooks</h1>
+                <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Apexbooks</h1>
                 <p class="text-sm text-brand-purple font-semibold tracking-widest uppercase mt-1">Financial Intelligence</p>
             </div>
 
             <!-- Header Text -->
-            <h2 class="text-2xl font-bold text-slate-900 mb-2 text-center">Client Portal Login</h2>
-            <p class="text-slate-500 text-sm mb-10 text-center">Enter your credentials to access your dashboard.</p>
-
+           <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2 text-center">Client Portal Login</h2>
+            <p class="text-slate-500 dark:text-slate-400 text-sm mb-10 text-center">Enter your credentials to access your dashboard.</p>
             <form action="#" method="POST" class="space-y-8" id="loginForm">
                 @csrf
 
@@ -164,7 +174,7 @@
                 <div class="flex items-center justify-between pt-2">
                     <label class="flex items-center gap-2 cursor-pointer group">
                         <input type="checkbox" class="w-4 h-4 rounded border-slate-300 text-brand-purple focus:ring-brand-purple cursor-pointer transition-colors">
-                        <span class="text-sm text-slate-600 group-hover:text-brand-purple transition-colors">Remember me</span>
+                        <span class="text-sm text-slate-600 dark:text-slate-300 group-hover:text-brand-purple transition-colors">Remember me</span>
                     </label>
                     <a href="#" class="text-sm font-semibold text-brand-purple hover:text-brand-darkPurple transition-colors">Forgot password?</a>
                 </div>
@@ -180,7 +190,7 @@
             </form>
 
             <!-- Footer Link -->
-            <p class="mt-8 text-center text-sm text-slate-500">
+           <p class="mt-8 text-center text-sm text-slate-500 dark:text-slate-400">
                 Don't have an account?
                 <a href="#" class="font-bold text-brand-purple hover:text-brand-darkPurple transition-colors underline decoration-slate-300 underline-offset-4 hover:decoration-brand-purple">Request a demo</a>
             </p>
@@ -190,5 +200,6 @@
 
     <script src="script.js"></script>
     <script src="{{asset('js/Sign2.js')}}"></script>
+    <script src="{{ asset('js/theme.js') }}"></script>
 </body>
 </html>
